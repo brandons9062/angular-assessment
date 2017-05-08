@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="assessment">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <title>Front End Assessment</title>
@@ -12,9 +12,15 @@
         <header class="site-header" role="banner">
             <div class="container">
               <!--Insert Logo directive here -->
+                <logo class ='myLogo'></logo>
+                
                 <nav class="site-nav">
                     <ul class="primary-nav">
                         <!-- Navs go here -->
+                        <li ui-sref="home">Home</li>
+                        <li ui-sref="about">About</li>
+                        <li ui-sref="blog">Blog</li>
+                        <li ui-sref="shop">Shop</li>
                     </ul>
                 </nav>
                 <button class="hamburger toggle-nav js-toggle-nav" ng-click="showNav">
@@ -28,6 +34,7 @@
         <main class="site-main" role="main">
 
         <!--Views go here -->
+        <ui-view></ui-view>
 
         </main>
         </div>
@@ -35,7 +42,13 @@
 
 <!--ADD ALL YOUR SCRIPTS HERE -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+<script src="app.js"></script>
+<script src="shopService.js"></script>
+<script src="shopCtrl.js"></script>
+<script src="productDetailsCtrl.js"></script>
+<script src="logoDirective.js"></script>
+
 
 </body>
 </html>
